@@ -802,6 +802,19 @@
             opacity: 1;
         }
 
+        /* ---------- ক্লিকযোগ্য কার্ড — পুরো কার্ডে ক্লিক করা যাবে ---------- */
+        .website-card.card-clickable,
+        .resource-card.card-clickable,
+        .contact-card.card-clickable {
+            cursor: pointer;
+        }
+
+        .website-card.card-clickable:active,
+        .resource-card.card-clickable:active,
+        .contact-card.card-clickable:active {
+            transform: scale(0.97);
+        }
+
         /* ============================================================
         ════════════════════════════════════════════════════════════════
         এই অংশটি শুধুমাত্র CSS কমেন্ট — HTML ইন্সট্রাকশন নিচে HTML সেকশনে আছে
@@ -1378,8 +1391,9 @@
 
                 <!-- ============================================================
                 কার্ড ১: Provakar Math (LIVE — লিংক আছে)
+                ★★★ পুরো কার্ডে ক্লিক করলেই লিংক খুলবে ★★★
                 ============================================================ -->
-                <div class="website-card fade-up">
+                <div class="website-card fade-up card-clickable" data-href="https://provakar4173student-del.github.io/provakar-math/">
                     <div class="card-icon"><i class="fas fa-calculator fa-2x" style="color: var(--accent-blue);"></i></div>
                     <h3>Provakar Math</h3>
                     <p class="card-desc">গণিত সম্পর্কিত website — অংক শেখার জন্য তৈরি করা হয়েছে।</p>
@@ -1391,8 +1405,9 @@
 
                 <!-- ============================================================
                 কার্ড ২: Provakar Portfolio (LIVE — লিংক আছে)
+                ★★★ পুরো কার্ডে ক্লিক করলেই লিংক খুলবে ★★★
                 ============================================================ -->
-                <div class="website-card fade-up">
+                <div class="website-card fade-up card-clickable" data-href="https://provakar4173student-del.github.io/Provakar/">
                     <div class="card-icon"><i class="fas fa-user-astronaut fa-2x" style="color: var(--accent-purple);"></i></div>
                     <h3>Provakar Portfolio</h3>
                     <p class="card-desc">আমার personal portfolio website — আমার সম্পর্কে জানতে এখানে যাও।</p>
@@ -1483,7 +1498,7 @@
             <div class="resources-grid">
 
                 <!-- রিসোর্স কার্ড ১: Notes -->
-                <div class="resource-card fade-up">
+                <div class="resource-card fade-up card-clickable" data-href="https://drive.google.com/drive/folders/1O798TAQdsBHop8iF2_1_OZat1HIgraLN?usp=drive_link">
                     <div class="resource-icon">
                         <i class="fas fa-sticky-note" style="color: var(--accent-blue);"></i>
                     </div>
@@ -1497,7 +1512,7 @@
                 </div>
 
                 <!-- রিসোর্স কার্ড ২: Prompts -->
-                <div class="resource-card fade-up">
+                <div class="resource-card fade-up card-clickable" data-href="https://docs.google.com/document/d/1Venz9BpRRIVq0UFUnjzZj0itwWJeJTCw6MmJLrrdqIQ/edit?usp=sharing">
                     <div class="resource-icon">
                         <i class="fas fa-file-alt" style="color: var(--accent-purple);"></i>
                     </div>
@@ -1527,7 +1542,7 @@
             <div class="contact-grid">
 
                 <!-- কন্টাক্ট কার্ড ১: ইনস্টাগ্রাম -->
-                <div class="contact-card instagram-card fade-up">
+                <div class="contact-card instagram-card fade-up card-clickable" data-href="https://www.instagram.com/provakar.biswas.3914?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                     <div class="contact-icon">
                         <i class="fab fa-instagram"></i>
                     </div>
@@ -1539,13 +1554,13 @@
                 </div>
 
                 <!-- কন্টাক্ট কার্ড ২: ইমেইল -->
-                <div class="contact-card email-card fade-up">
+                <div class="contact-card email-card fade-up card-clickable" data-href="mailto:provakarb541@gmail.com">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-label">Email</div>
-                    <div class="contact-info">provakarb541@gmail.com</div>
-                    <a href="mailto:provakarb541@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <div class="contact-info"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95e5e7fae3f4fef4e7f7a0a1a4d5f2f8f4fcf9bbf6faf8">[email&#160;protected]</a></div>
+                    <a href="/cdn-cgi/l/email-protection#b3c3c1dcc5d2d8d2c1d1868782f3d4ded2dadf9dd0dcde" target="_blank" rel="noopener noreferrer" class="contact-btn">
                         Email পাঠাও <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -1564,7 +1579,7 @@
                 <a href="https://www.instagram.com/provakar.biswas.3914?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:provakarb541@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                <a href="/cdn-cgi/l/email-protection#0171736e77606a60736334353041666c60686d2f626e6c" target="_blank" rel="noopener noreferrer" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -1590,7 +1605,7 @@
     <!-- ============================================================
     সব JavaScript — ইনলাইন স্ক্রিপ্ট
     ============================================================ -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         /* ============================================================
         ১. লোডিং স্ক্রিন — page load হয়ে গেলে fade out
         ============================================================ */
@@ -1954,7 +1969,26 @@
         });
 
         /* ============================================================
-        ১০. কনসোল এ কিছু সুন্দর মেসেজ
+        ১০. পুরো কার্ড ক্লিকযোগ্য করা — লিংক কার্ডে যেকোনো জায়গায় ক্লিক করলেই ওপেন হবে
+        ============================================================ */
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickableCards = document.querySelectorAll('.card-clickable');
+
+            clickableCards.forEach(function(card) {
+                card.addEventListener('click', function(e) {
+                    // বাটনে ক্লিক করলে ডাবল নেভিগেশন না হয়
+                    if (e.target.closest('.card-btn')) return;
+
+                    const href = card.getAttribute('data-href');
+                    if (href) {
+                        window.open(href, '_blank', 'noopener,noreferrer');
+                    }
+                });
+            });
+        });
+
+        /* ============================================================
+        ১১. কনসোল এ কিছু সুন্দর মেসেজ
         ============================================================ */
         console.log('%c 🚀 Provakar\'s Hub v1.0 ',
             'background: #0a0a0f; color: #00d4ff; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 8px; border: 1px solid #00d4ff;'
@@ -1967,5 +2001,5 @@
             );
     </script>
 
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a165d92ececa8435',t:'MTc4MzI0OTA0MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
